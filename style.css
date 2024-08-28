@@ -1,0 +1,134 @@
+*, html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+body {
+    font-family: "Nerko One", cursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+  }
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    background: linear-gradient(185deg, rgb(36, 149, 253), rgb(125, 69, 209));
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.header h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.input-menu{
+    display: flex;
+    position: relative;
+    height: 35px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.input-menu input {
+    width: 70%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: .8em;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+}
+
+.input-menu button{
+    width: 30%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background: #a20377;
+    font-weight: bold;
+    color: white;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.input-menu button:hover{
+    background: #d412b4;
+}
+
+.list{
+    background: rgb(255, 255, 255);
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    max-height: 330px;
+    overflow-y: auto;
+}
+
+.list li{
+    width: 100%;
+    display: flex;
+    font-size: .9em;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 10px;
+    word-break: break-all;
+    position: relative;
+    padding: 0 30px;
+}
+
+.list li::before{
+    content: url(icon/radio_button_unchecked_18dp_E8EAED_FILL0_wght400_GRAD0_opsz20.svg);
+    position: absolute;
+    left: 0;
+    top:2px;
+}
+
+.list li.checked{
+    text-decoration: line-through;
+    color: #555555;
+}
+
+.list li.checked::before{
+    content: url(icon/check_circle_18dp_E8EAED_FILL0_wght400_GRAD0_opsz20.svg);
+}
+
+.list li span{
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    /* transform: translateX(10px); */
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 50%;
+    transition: .2s ease-in;
+    font-family:  sans-serif;
+
+}
+
+.list li span:hover{
+    background: #d9d9d9;
+}
+
